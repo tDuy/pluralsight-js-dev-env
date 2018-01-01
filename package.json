@@ -6,7 +6,6 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
-    "nsp": "^3.1.0",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
@@ -34,6 +33,7 @@
     "mocha": "^3.5.3",
     "nock": "^9.0.20",
     "npm-run-all": "^4.1.1",
+    "nsp": "^3.1.0",
     "numeral": "^2.0.6",
     "open": "^0.0.5",
     "rimraf": "^2.6.2",
