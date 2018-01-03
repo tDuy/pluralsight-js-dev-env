@@ -15,7 +15,11 @@
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+    "start-mockapi": "json-server --watch src/api/db.json --port 3001",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "babel-node buildScripts/distServer.js"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -52,9 +56,9 @@
     "open": "^0.0.5",
     "rimraf": "^2.6.2",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^1.1.5",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.19.1",
-    "webpack-md5-hash": "^0.0.5"
+    "webpack-hot-middleware": "^2.19.1"
   }
 }
